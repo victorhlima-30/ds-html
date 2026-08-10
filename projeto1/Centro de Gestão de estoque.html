@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Estoque</title>   
+    <link rel="styleheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <p>Menu do sistema</p>
+        <ul>
+            <li><a href="#estoque">Tabela de Estoque</a></li>
+            <li><a href="#relatorios">Relatórios</a></li>
+            <li><a href="#contato">Contato</a></li>
+        </ul>
+    </nav>
+    <main>
+        <h1>Cadastro de Produtos</h1>
+        <form>
+            <label for="sku">SKU do Produto</label>
+            <input
+                type="text"
+                name="sku"
+                id="sku"
+                placeholder="Digite o SKU do seu produto"
+                required>
+            
+            <br>
+            <br>
+
+            <label for="nome_produto">Nome do Produto</label>
+            <input
+                type="text"
+                name="nomeProd"
+                id="nome_produto"
+                placeholder="Nome do produto"
+                required>
+            <br>
+            <br>
+
+            <label for="quantidade_produto">Quantidade</label>
+            <input
+                type="number"
+                name="quantidadeProdu"
+                id="quantidade_produto"
+                min="1"
+                placeholder="1"
+                required>
+
+            <br>
+            <br>
+
+            <label for="tipo">Produto</label>
+
+            <select name="tipo" id="tipo" required>
+                <option value="">Selecione um produto</option>
+                <option value="alface">Alface</option>
+                <option value="vina">Vina</option>
+                <option value="paox">PãoX</option>
+                <option value="paoh">PãoH</option>
+                <option value="tomate">Tomate</option>
+                <option value="milho">Milho</option>
+                <option value="hamburguer">Hamburguer</option>
+                <option value="cebola">Cebola</option>
+                <option value="ovo">Ovo</option>
+            </select>
+
+            <br>
+            <br>
+
+            <label for="valor_produto">Valor do Produto</label>
+            <br>
+
+            <input
+                type="number"
+                name="valorProd"
+                id="valor_produto"
+                step="0.01"
+                min="0"
+                placeholder="0.00"
+                required>
+
+            <br>
+            <br>
+
+            <label for="datarecebimento">Data de recebimento</label>
+            <br>
+
+            <input
+                type="date"
+                name="datarecebimento"
+                id="datarecebimento"
+                required>
+            <br>
+            <br>
+
+            <button type="submit">Cadastrar</button>
+            <button type="reset">Limpar</button>
+
+        </form>
+
+
+        <section id="estoque">
+
+        <h2>Produtos em estoque</h2>
+
+            <table border="1">
+
+                <caption>Lista de produtos</caption>
+
+                <thead>
+                    <tr>
+                        <th>SKU</th>
+                        <th>Nome</th>
+                        <th>Quantidade</th>
+                        <th>Valor (R$)</th>
+                        <th>Categoria</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+
+                    <tr>
+                        <td>ELA-009</td>
+                        <td>Alface</td>
+                        <td>15</td>
+                        <td>5,00</td>
+                        <td>Frutas</td>
+                        <td>Disponível</td>
+                    </tr>
+
+                    <tr>
+                        <td>ELA-002</td>
+                        <td>Vina</td>
+                        <td>50</td>
+                        <td>0,45</td>
+                        <td>Carne</td>
+                        <td>Disponível</td>
+                    </tr>
+
+                    <tr>
+                        <td>ELA-001</td>
+                        <td>PãoX</td>
+                        <td>3</td>
+                        <td>12,00</td>
+                        <td>Pão</td>
+                        <td>Baixa quantidade</td>
+                    </tr>
+
+                    <tr>
+                        <td>ELA-006</td>
+                        <td>PãoH</td>
+                        <td>12</td>
+                        <td>12,00</td>
+                        <td>Pão</td>
+                        <td>Disponível</td>
+                    </tr>
+
+                    <tr>
+                        <td>ELS-001</td>
+                        <td>Tomate</td>
+                        <td>8</td>
+                        <td>6,00</td>
+                        <td>Frutas</td>
+                        <td>Disponível</td>
+                    </tr>
+
+                    <tr>
+                        <td>ELS-021</td>
+                        <td>Milho</td>
+                        <td>8</td>
+                        <td>17,00</td>
+                        <td>Frutas</td>
+                        <td>Disponível</td>
+                    </tr>
+
+                    <tr>
+                        <td>ELS-011</td>
+                        <td>Hamburguer</td>
+                        <td>8</td>
+                        <td>17,00</td>
+                        <td>Carne</td>
+                        <td>Disponível</td>
+                    </tr>
+
+                    <tr>
+                        <td>ELS-601</td>
+                        <td>Cebola</td>
+                        <td>8</td>
+                        <td>17,00</td>
+                        <td>Frutas</td>
+                        <td>Disponível</td>
+                    </tr>
+
+                    <tr>
+                        <td>ELS-7671</td>
+                        <td>Ovo</td>
+                        <td>12</td>
+                        <td>15,00</td>
+                        <td>Carne</td>
+                        <td>Disponível</td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </section>
+
+        <section id="relatorios">
+            <h2>Relatórios</h2>
+            <p>Área destinada aos relatórios do estoque.</p>
+        </section>
+
+        <section id="contato">
+            <h2>Contato</h2>
+            <p>Área destinada às informações de contato.</p>
+        </section>
+
+    </main>
+
+</body>
+</html>
+

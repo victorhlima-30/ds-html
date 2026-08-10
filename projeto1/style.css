@@ -1,0 +1,142 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: hsl(55, 16%, 84%);
+    line-height: 1.6;
+    padding: 20px;
+}
+
+hr {
+    display:nome;
+}
+/*cabeçalho e rodapé*/
+
+header {
+    background-color: antiquewhite;
+    color:#e7820e;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+header h1{
+    font-size: 1,5rem;
+    font-weight: normal;
+}
+footer{
+    text-align: center;
+    padding: 20px;
+    color:bisque;
+    font-size: 0,875rem;
+    margin-top: 30px;
+}
+body{
+    display: flex; 
+    flex-wrap: wrap;
+    gap:20px;
+}
+header, footer{
+    width:100%;
+}
+aside{
+    flex:1;
+    min-width: 200p;
+    background-color: antiquewhite;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #ffffff;
+    height: fit-content;
+}
+aside h3{
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    color: #ffffff
+}
+aside ul{
+    list-style: nome;
+}
+aside li{
+    margin-bottom: 10px;
+    color: #ffffff;
+    font-size: 0.95
+}
+aside a{
+    text-decoration: nome;
+    color:#e7820e;
+    font-size: 0.95rem;
+}
+aside a:hover{
+    text-decoration: underline;
+}
+
+main{
+    flex: 3;
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+section{
+    background-color: #e7820e;
+    padding: 25px;
+    border-radius: 8px;
+    border: 1px solid #ffffff
+}
+section h2{
+    font-size: 1.25rem;
+    margin-bottom: 20px;
+    color:black;
+    border-bottom: 2px solid #ffffff;
+    padding-bottom: 10px;
+}
+form label{
+    font-weight: 600;
+    font-size: 0.875;
+    color: #ffffff;
+}
+{
+input=[type="text"],
+input=[type="number"],
+input=[type="date"],""
+}
+select{
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ffffff;
+    border-radius: 6px;
+    font-size: 0.95rem;
+}
+input:focus, select:focus{
+    outline: nome;
+    border-color:blue;
+}
+button{
+    padding: 10px 20px;
+    border: nome;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    cursor: pointer;
+}
+button[type="submit"]{
+    background-color: #e7820e;
+    color: #ffffff;
+}
+
+button[type="reset"]:hover{
+    background-color: #e7820e;
+    color: #ffffff;
+}
+    button[type="reset"]{
+    background-color: #e7820e;
+    color: #ffffff;
+}
+    button[type="submit"]:hover{
+    background-color: #e7820e;
+    color: #ffffff;
+}
+
+
