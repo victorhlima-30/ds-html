@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HelpDesk - Painel de atendimento</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>HelpDesk</h1>
+    </header>
+    <hr>
+    <main>
+        <h2>Resumo operacional</h2>
+        <ul>
+            <li><strong>Chamados em aberto: </strong></li>
+            <li><strong>Em andamento: </strong></li>
+            <li><strong>Concluídos hoje: </strong></li>
+        </ul>
+    </main>
+
+    <section>
+        <h2>Abrir chamado</h2>
+        <form>
+            <label for="nameSolicitante">Nome do solicitante</label>
+            <input type="text" name="nameSocilitante" id="name_pessoa" placeholder="Seu nome" required>
+
+            <label for="departamento">Departamento: </label>
+            <select name="departamento" id="departamento" required aria-placeholder="Selecione uma opção">
+                <option value="" disabled selected>Selecione uma opção</option>
+                <option value="Financeiro">Financeiro</option>
+                <option value="RH">Recursos humanos</option>
+                <option value="Desenvolvimento">Desenvolvimento</option>
+                <option value="Diretoria">Diretoria</option>
+            </select>
+
+            <input type="radio" name="priority" id="priority_input1" checked>
+            <label for="priority_input1">Baixa</label>
+
+            <input type="radio" name="priority" id="priority_input2">
+            <label for="priority_input2">Media</label>
+
+            <input type="radio" name="priority" id="priority_input3">
+            <label for="priority_input3">Alta</label>
+
+            <input type="radio" name="priority" id="priority_input4">
+            <label for="priority_input4">Crítica</label>
+
+            <hr>
+            <label for="dispositivos">Dispositivos com problema</label>
+
+            <input type="checkbox" name="impressora" id="impressora" value="impressora">
+            <label for="impressora">Impressora</label>
+
+            <input type="checkbox" name="computador" id="computador" value="computador">
+            <label for="computador">Computador</label>
+
+            <input type="checkbox" name="monitor" id="monitor" value="monitor">
+            <label for="monitor">Monitor</label>
+
+            <input type="checkbox" name="teclado" id="teclado" value="teclado">
+            <label for="teclado">Teclado</label>
+
+            <input type="checkbox" name="mouse" id="mouse" value="mouse">
+            <label for="mouse">Mouse</label>
+
+            <label for="description-bo">Descreva seu problema</label>
+            <textarea name="description-bo" id="Problema" cols="40" rows="7" placeholder="Descreva seu problema"
+                maxlength="2">
+
+            </textarea>
+            <button type="reset">Limpar</button>
+            <button type="submit">Abrir chamado</button>
+        </form>
+    </section>
+    <hr>
+    <section>
+        <h2>Resumo dos chamados</h2>
+
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Setor</th>
+                    <th>Solicitante</th>
+                    <th>ID chamado</th>
+                    <th>Problema</th>
+                    <th>Prioridade</th>
+                    <th>Status</th>
+                    <th>Data de abertura</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Financeiro</td>
+                    <td>Bigodudo</td>
+                    <td>01</td>
+                    <td>Monitor com leds queimados</td>
+                    <td>Alta</td>
+                    <td>Finalizada</td>
+                    <td>19/04/26</td>
+                </tr>
+                <tr>
+                    <td>Engenharia</td>
+                    <td>Anísio</td>
+                    <td>02</td>
+                    <td>Ár condicionado com poeira</td>
+                    <td>Média</td>
+                    <td>Em andamento</td>
+                    <td>04/08/26</td>
+                </tr>
+                <tr>
+                    <td>Limpeza</td>
+                    <td>Vaka</td>
+                    <td>03</td>
+                    <td>Rodo quebrado</td>
+                    <td>Baixa</td>
+                    <td rowspan="2">Em aberto</td>
+                    <td>04/08/26</td>
+                </tr>
+                <tr>
+                    <td>Cozinha</td>
+                    <td>Garfields</td>
+                    <td>04</td>
+                    <td>Cabo o gás</td>
+                    <td>Crítica</td>
+                    
+                    <td>04/08/26</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+</body>
+</html>

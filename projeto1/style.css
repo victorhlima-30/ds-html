@@ -5,19 +5,32 @@
 }
 body{
     font-family: Arial, Helvetica, sans-serif;
-    background-color: hsl(55, 16%, 84%);
+    background-color: lab(95.92% 0.15 1.67);
     line-height: 1.6;
     padding: 20px;
 }
-
+h1{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: oklab(76.301% 0.05814 0.1501);
+    line-height: 0.95;
+    padding: 20px;
+    border-radius: 10px;
+}
 hr {
     display:nome;
 }
-/*cabeçalho e rodapé*/
+select#tipo{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: oklab(76.301% 0.05814 0.1501);
+    line-height: 1.6;
+    padding: 20px;
+    margin-bottom: 10px;
+}
+
 
 header {
-    background-color: antiquewhite;
-    color:#e7820e;
+    background-color: #e69601;
+    color:hsl(231, 89%, 48%);
     padding: 20px;
     border-radius: 8px;
     margin-bottom: 20px;
@@ -29,7 +42,7 @@ header h1{
 footer{
     text-align: center;
     padding: 20px;
-    color:bisque;
+    color:rgb(14, 13, 13);
     font-size: 0,875rem;
     margin-top: 30px;
 }
@@ -44,23 +57,23 @@ header, footer{
 aside{
     flex:1;
     min-width: 200p;
-    background-color: antiquewhite;
+    background-color: rgb(182, 123, 47);
     padding: 20px;
     border-radius: 8px;
-    border: 1px solid #ffffff;
+    border: 1px solid #000000;
     height: fit-content;
 }
 aside h3{
     font-size: 1.1rem;
     margin-bottom: 15px;
-    color: #ffffff
+    color: #da8313;
 }
 aside ul{
     list-style: nome;
 }
 aside li{
     margin-bottom: 10px;
-    color: #ffffff;
+    color: #110a0a;
     font-size: 0.95
 }
 aside a{
@@ -83,7 +96,7 @@ section{
     background-color: #e7820e;
     padding: 25px;
     border-radius: 8px;
-    border: 1px solid #ffffff
+    border: 1px solid hsl(0, 33%, 4%)
 }
 section h2{
     font-size: 1.25rem;
@@ -95,13 +108,13 @@ section h2{
 form label{
     font-weight: 600;
     font-size: 0.875;
-    color: #ffffff;
+    color: #050404;
 }
-{
-input=[type="text"],
-input=[type="number"],
-input=[type="date"],""
+
+input[text],input[date],input[number],select{
+    text-align: center;
 }
+
 select{
     width: 100%;
     padding: 10px;
@@ -138,5 +151,9 @@ button[type="reset"]:hover{
     background-color: #e7820e;
     color: #ffffff;
 }
-
-
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    font-size: 0.9rem;
+}
