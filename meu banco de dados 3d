@@ -1,0 +1,70 @@
+create database academia_db;
+use academia_db;
+
+create table planos(
+id_planos int auto_increment primary key,
+nome varchar (50) not null,
+valor_mensal decimal (8,2) not null, 
+duracao_meses int not null 
+);
+
+create table aluno(
+id_aluno int auto_increment primary key,
+nome varchar(100) not null, 
+cpf varchar(20) unique not null,
+telefone varchar (20),
+data_nascimento date not null
+);
+
+create table instrutores(
+id_instrutor int auto_increment primary key,
+nome varchar (100) not null,
+especialidade varchar(50) not null,
+telefone varchar(20)
+);
+
+create table matriculas(
+id_matriculas int auto_increment primary key, 
+id_aluno int not null,
+id_plano int not null,
+id_instrutor int, 
+data_inicio date default (current_date),
+status varchar (20) default 'ativo',
+foreign key (id_aluno) references aluno(id_aluno),
+foreign key (id_plano) references plano(id_plano),
+foreign key (id_instrutor) references intrutores(id_instrutor)
+);
+
+insert_into planos (nome, valor_mensal, duracao_meses) value
+('Mensal basico', 80.90, 1),
+('trimestral Fit, 79.90, 3),
+('semestral', 'crossfit', 69.90, 6),
+('Anual VIP', '59.90, 12');
+
+insert_into instrutores (nome, cpf, data_nascimento) values 
+('ana clara ribeiro', 123-232-323-33','4110020034', '1932-32-33'),
+('lavia', 123-232-323-33','4110020034', '1932-32-33'),
+('ana clara ribeiro', 123-232-323-33','4110020034', '1932-32-33'),
+('kian', 123-232-323-33','4110020034', '1932-32-33');
+
+insert_into alunos (id_alunos, id_planos, id_instruor, data_inicio) values
+(1,4,1, '2026-01-10', 'ativo'),
+(1,4,1, '2026-01-10', 'ativo'),
+(1,4,1, '2026-01-10', 'ativo'),
+(4,3,3, '2026-01-10', 'Cancelado');
+
+select nome, telefone
+from alunos
+order by nome asc;
+
+select *
+from planos
+where valor_mensal <100.00;
+
+select * 
+from instrutores
+where especialidade = 'musculação';
+
+select count(*) as total_matriculas_ativas
+from matriculas
+where status = 'ativo';
