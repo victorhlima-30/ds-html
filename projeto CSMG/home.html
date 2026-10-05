@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Six Seven</title>
+</head>
+<body>
+    
+    <div class="card-home">
+        <h2>Academia do Fefe Six Seven</h2>
+        <p id="mensagemBoasVindas">Bem Vindo!</p>
+        <p>Treino Liberado</p>
+        <button id="btnVerTreinos"> Ver Treinos </button>
+        <button type="button" id="btnCadastrarUsuario"> Cadastrar</button>
+        <button id="btnSair">Sair</button>
+    </div>
+
+    <script>
+        const usuarioLogado = localStorage.getItem('usuarioLogado')
+
+        if(!usuarioLogado){
+            window.location.href='index.html'
+        } else{
+            document.getElementById('mensagemBoasVindas').textContent = 'Bem vindo, ' + usuarioLogado + '!'
+        }
+        document.getElementById('btnSair').addEventListener('click', function(){
+            localStorage.removeItem('usuarioLogado');
+            window.location.href='index.html';
+        });
+        document.getElementById('btnCadastrarUsuario').addEventListener('click', fuctinon (){
+            window.location.href="cadastro.html";
+        });
+
+        document.getElementsByName
+    </script>
+</body>
+</html>

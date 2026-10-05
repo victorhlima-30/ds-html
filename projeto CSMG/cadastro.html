@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-BR>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro Usuario</title>
+    <link rel="stylesheet" href"style.css">
+</html>
+    <body>
+<form id="formCadastro">
+    <h2> Cadastrar Usuario</h2>
+    <input type="text" id="novoUsuario" placeholder="Novo Usuario" required>
+    <input type="submit" id="novasenha" placeholder="NovoSenha" required>
+    <button type="button" id="btnvoltarhome" class="btn-segundario"> Voltar </button>
+</form>
+<script src="script.js"></script>
+<script>
+    const usuarioLogado = localStorage.getItem('usuarioLogo');
+    if(!usuarioLogado){
+        window.locationhref="index.html";
+    }
+
+    document.getElementById('btnvoltarhome').addEventListener('click', function(){
+    });
+</script>
+    </body>
+
+</html>
