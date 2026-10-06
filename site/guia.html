@@ -1,0 +1,1515 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sabores Da Cidade</title>
+    <link rel="stylesheet" href="stylerestaurante.css"
+</head>
+<body>
+    
+</body>
+</html>
+
+<header class="header">
+
+    <div class="logo">
+
+        GASTRÔ
+
+        <span>
+            SELECTION
+        </span>
+
+    </div>
+
+
+    <nav>
+
+        <a href="#inicio">
+            Início
+        </a>
+
+        <a href="#restaurantes">
+            Restaurantes
+        </a>
+
+        <a href="#distincoes">
+            Seleção
+        </a>
+
+        <a href="#pratos">
+            Pratos
+        </a>
+
+    </nav>
+
+
+    <button class="menu-button">
+        Curitiba
+    </button>
+
+</header>
+
+
+
+<!-- =====================================
+     HERO
+====================================== -->
+
+<section
+    class="hero"
+    id="inicio">
+
+
+    <div class="hero-image">
+
+        <img
+            src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1800&q=90"
+            alt="Experiência gastronômica">
+
+    </div>
+
+
+    <div class="hero-content">
+
+        <span class="eyebrow">
+            GUIA GASTRONÔMICO
+        </span>
+
+
+        <h1>
+            Os melhores sabores
+            da Grande Curitiba.
+        </h1>
+
+
+        <p>
+            Uma seleção de restaurantes de Curitiba
+            e região para descobrir novas experiências,
+            cozinhas e pratos especiais.
+        </p>
+
+
+        <div class="search">
+
+            <input
+                type="text"
+                id="search"
+                placeholder="Pesquisar restaurante, prato ou cozinha"
+            >
+
+
+            <button onclick="buscar()">
+
+                Pesquisar
+
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================
+     DISTINÇÕES
+====================================== -->
+
+<section
+    class="distincoes"
+    id="distincoes">
+
+
+    <div class="section-header">
+
+        <span class="eyebrow">
+            GASTRÔ SELECTION
+        </span>
+
+
+        <h2>
+            Nossa seleção
+        </h2>
+
+
+        <p>
+            Descubra restaurantes escolhidos por sua
+            cozinha, proposta e experiência gastronômica.
+        </p>
+
+    </div>
+
+
+
+    <div class="distincao-grid">
+
+
+        <div class="distincao">
+
+            <div class="distincao-symbol">
+                1
+            </div>
+
+
+            <h3>
+                Experiência excepcional
+            </h3>
+
+
+            <p>
+                Restaurantes que se destacam pela
+                experiência gastronômica completa.
+            </p>
+
+        </div>
+
+
+
+        <div class="distincao">
+
+            <div class="distincao-symbol">
+                2
+            </div>
+
+
+            <h3>
+                Cozinha excelente
+            </h3>
+
+
+            <p>
+                Casas reconhecidas pela qualidade,
+                técnica e consistência.
+            </p>
+
+        </div>
+
+
+
+        <div class="distincao">
+
+            <div class="distincao-symbol">
+                3
+            </div>
+
+
+            <h3>
+                Recomendado
+            </h3>
+
+
+            <p>
+                Uma excelente escolha para conhecer
+                uma boa experiência gastronômica.
+            </p>
+
+        </div>
+
+
+
+        <div class="distincao">
+
+            <div class="distincao-symbol bib">
+                ★
+            </div>
+
+
+            <h3>
+                Boa relação qualidade-preço
+            </h3>
+
+
+            <p>
+                Restaurantes que entregam uma experiência
+                especial por um preço interessante.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================
+     RESTAURANTES
+====================================== -->
+
+<section
+    class="restaurants-section"
+    id="restaurantes">
+
+
+    <div class="section-header left">
+
+        <span class="eyebrow">
+            CURITIBA E REGIÃO
+        </span>
+
+
+        <h2>
+            Restaurantes selecionados
+        </h2>
+
+
+        <p>
+            Conheça alguns dos restaurantes que fazem
+            parte da cena gastronômica da Região
+            Metropolitana de Curitiba.
+        </p>
+
+    </div>
+
+
+
+    <!-- FILTROS -->
+
+    <div class="filters">
+
+
+        <button
+            class="filter active"
+            onclick="filtrar('todos', this)">
+
+            Todos
+
+        </button>
+
+
+        <button
+            class="filter"
+            onclick="filtrar('curitiba', this)">
+
+            Curitiba
+
+        </button>
+
+
+        <button
+            class="filter"
+            onclick="filtrar('sao-jose', this)">
+
+            São José dos Pinhais
+
+        </button>
+
+
+        <button
+            class="filter"
+            onclick="filtrar('campo-largo', this)">
+
+            Campo Largo
+
+        </button>
+
+
+        <button
+            class="filter"
+            onclick="filtrar('italiana', this)">
+
+            Italiana
+
+        </button>
+
+
+        <button
+            class="filter"
+            onclick="filtrar('carnes', this)">
+
+            Carnes
+
+        </button>
+
+    </div>
+
+
+
+    <!-- =====================================
+         GRID
+    ====================================== -->
+
+    <div
+        class="restaurant-grid"
+        id="restaurantList">
+
+
+
+        <!-- =================================
+             TERRAZZA 40
+        ================================== -->
+
+        <article
+            class="restaurant-card"
+            data-category="curitiba"
+            data-search="terrazza 40 curitiba internacional carnes peixes frutos do mar massas beef wellington">
+
+
+            <div class="restaurant-image">
+
+                <img
+                    src="https://images.unsplash.com/photo-1552566626-52f8b828add9?auto=format&fit=crop&w=1000&q=85"
+                    alt="Experiência gastronômica">
+
+                <span class="distinction-badge">
+                    Destaque
+                </span>
+
+            </div>
+
+
+            <div class="restaurant-content">
+
+
+                <div class="restaurant-location">
+
+                    CURITIBA · BATEL
+
+                </div>
+
+
+                <h3>
+                    Terrazza 40
+                </h3>
+
+
+                <p class="cuisine">
+                    Culinária internacional
+                </p>
+
+
+                <div class="price">
+                    $$$$
+                </div>
+
+
+                <p class="description">
+                    Restaurante panorâmico localizado na cobertura
+                    do Edifício Champagnat Tower, com vista de
+                    mais de 180 graus da cidade.
+                </p>
+
+
+                <div class="recommended-dish">
+
+                    <span>
+                        PRATO EM DESTAQUE
+                    </span>
+
+
+                    <strong>
+                        Beef Wellington
+                    </strong>
+
+                </div>
+
+
+                <p class="restaurant-address">
+
+                    Rua Pe. Anchieta, 1287,
+                    Curitiba - PR
+
+                </p>
+
+
+                <div class="card-footer">
+
+
+                    <a
+                        href="tel:+554130140141">
+
+                        Telefone
+
+                    </a>
+
+
+                    <a
+                        href="https://www.terrazza40.com/"
+                        target="_blank">
+
+                        Site
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- =================================
+             PANTUCCI
+        ================================== -->
+
+        <article
+            class="restaurant-card"
+            data-category="curitiba"
+            data-search="pantucci trattoria curitiba italiana massa ravioli risoto juveve">
+
+
+            <div class="restaurant-image">
+
+                <img
+                    src="https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=1000&q=85"
+                    alt="Culinária italiana">
+
+                <span class="distinction-badge">
+                    Selecionado
+                </span>
+
+            </div>
+
+
+            <div class="restaurant-content">
+
+
+                <div class="restaurant-location">
+
+                    CURITIBA · JUVEVÊ
+
+                </div>
+
+
+                <h3>
+                    Pantucci Trattoria
+                </h3>
+
+
+                <p class="cuisine">
+                    Italiana
+                </p>
+
+
+                <div class="price">
+                    $$$
+                </div>
+
+
+                <p class="description">
+                    Trattoria curitibana com inspiração italiana,
+                    pratos autorais e menus harmonizados.
+                </p>
+
+
+                <div class="recommended-dish">
+
+                    <span>
+                        PRATO EM DESTAQUE
+                    </span>
+
+
+                    <strong>
+                        Massas artesanais da casa
+                    </strong>
+
+                </div>
+
+
+                <p class="restaurant-address">
+
+                    Rua Barão de Guaraúna, 553,
+                    Juvevê, Curitiba - PR
+
+                </p>
+
+
+                <div class="card-footer">
+
+
+                    <a
+                        href="https://wa.me/5541999660288"
+                        target="_blank">
+
+                        WhatsApp
+
+                    </a>
+
+
+                    <a
+                        href="https://www.pantuccitrattoria.com.br/"
+                        target="_blank">
+
+                        Peça em casa
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- =================================
+             GIANTTURA
+        ================================== -->
+
+        <article
+            class="restaurant-card"
+            data-category="curitiba"
+            data-search="gianttura ristorante curitiba bigorrilho contemporanea autoral hermes custodio">
+
+
+            <div class="restaurant-image">
+
+                <img
+                    src="https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?auto=format&fit=crop&w=1000&q=85"
+                    alt="Gastronomia contemporânea">
+
+                <span class="distinction-badge">
+                    Destaque
+                </span>
+
+            </div>
+
+
+            <div class="restaurant-content">
+
+
+                <div class="restaurant-location">
+
+                    CURITIBA · BIGORRILHO
+
+                </div>
+
+
+                <h3>
+                    Gianttura Ristorante
+                </h3>
+
+
+                <p class="cuisine">
+                    Cozinha autoral contemporânea
+                </p>
+
+
+                <div class="price">
+                    $$$$
+                </div>
+
+
+                <p class="description">
+                    Uma cozinha que combina ingredientes
+                    brasileiros e europeus em criações
+                    autorais do chef Hermes Custódio.
+                </p>
+
+
+                <div class="recommended-dish">
+
+                    <span>
+                        CRIAÇÃO EM DESTAQUE
+                    </span>
+
+
+                    <strong>
+                        Barriga de porco recheada de matambre
+                    </strong>
+
+                </div>
+
+
+                <p class="restaurant-address">
+
+                    Largo Pedro Deconto, 295,
+                    Bigorrilho, Curitiba - PR
+
+                </p>
+
+
+                <div class="card-footer">
+
+
+                    <a
+                        href="tel:+5541997940219">
+
+                        Telefone
+
+                    </a>
+
+
+                    <a
+                        href="https://gianttura.com.br/"
+                        target="_blank">
+
+                        Site
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- =================================
+             DI PAOLO
+        ================================== -->
+
+        <article
+            class="restaurant-card"
+            data-category="curitiba"
+            data-search="di paolo curitiba jardim botanico italiana serra gaucha massas galeto">
+
+
+            <div class="restaurant-image">
+
+                <img
+                    src="https://images.unsplash.com/photo-1473093295043-cdd812d0e601?auto=format&fit=crop&w=1000&q=85"
+                    alt="Culinária italiana">
+
+                <span class="distinction-badge">
+                    Selecionado
+                </span>
+
+            </div>
+
+
+            <div class="restaurant-content">
+
+
+                <div class="restaurant-location">
+
+                    CURITIBA · JARDIM BOTÂNICO
+
+                </div>
+
+
+                <h3>
+                    Di Paolo
+                </h3>
+
+
+                <p class="cuisine">
+                    Cucina della Serra Gaúcha
+                </p>
+
+
+                <div class="price">
+                    $$$
+                </div>
+
+
+                <p class="description">
+                    Restaurante de inspiração italiana localizado
+                    no Jardim Botânico, com ambiente tradicional
+                    e capacidade para grandes grupos.
+                </p>
+
+
+                <div class="recommended-dish">
+
+                    <span>
+                        ESPECIALIDADE
+                    </span>
+
+
+                    <strong>
+                        Sequência Di Paolo
+                    </strong>
+
+                </div>
+
+
+                <p class="restaurant-address">
+
+                    Av. Prefeito Omar Sabbag, 461,
+                    Jardim Botânico, Curitiba - PR
+
+                </p>
+
+
+                <div class="card-footer">
+
+
+                    <a
+                        href="https://delivery.dipaolo.com.br/"
+                        target="_blank">
+
+                        Delivery
+
+                    </a>
+
+
+                    <a
+                        href="https://dipaolo.com.br/restaurantes/curitiba/"
+                        target="_blank">
+
+                        Site
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- =================================
+             BAMBINO MIO
+        ================================== -->
+
+        <article
+            class="restaurant-card"
+            data-category="sao-jose"
+            data-search="bambino mio sao jose dos pinhais italiana aeroporto massa">
+
+
+            <div class="restaurant-image">
+
+                <img
+                    src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=1000&q=85"
+                    alt="Prato italiano">
+
+                <span class="distinction-badge">
+                    Região Metropolitana
+                </span>
+
+            </div>
+
+
+            <div class="restaurant-content">
+
+
+                <div class="restaurant-location">
+
+                    SÃO JOSÉ DOS PINHAIS
+
+                </div>
+
+
+                <h3>
+                    Bambino Mio
+                </h3>
+
+
+                <p class="cuisine">
+                    Italiana
+                </p>
+
+
+                <div class="price">
+                    $$$
+                </div>
+
+
+                <p class="description">
+                    Restaurante italiano próximo ao acesso
+                    do Aeroporto Afonso Pena, conhecido por
+                    pratos tradicionais e ambiente familiar.
+                </p>
+
+
+                <div class="recommended-dish">
+
+                    <span>
+                        SUGESTÃO
+                    </span>
+
+
+                    <strong>
+                        Medalhão à Napolitana
+                    </strong>
+
+                </div>
+
+
+                <p class="restaurant-address">
+
+                    Rua Dr. Marcelino Nogueira, 775,
+                    São José dos Pinhais - PR
+
+                </p>
+
+
+                <div class="card-footer">
+
+
+                    <a
+                        href="tel:+554132835600">
+
+                        Telefone
+
+                    </a>
+
+
+                    <a
+                        href="https://www.tripadvisor.com.br/Restaurant_Review-g303455-d4572335-Reviews-Bambino_Mio-Sao_Jose_Dos_Pinhais_State_of_Parana.html"
+                        target="_blank">
+
+                        Informações
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- =================================
+             VELHA NAPOLITANA
+        ================================== -->
+
+        <article
+            class="restaurant-card"
+            data-category="sao-jose"
+            data-search="velha napolitana sao jose dos pinhais churrascaria carnes churrasco">
+
+
+            <div class="restaurant-image">
+
+                <img
+                    src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=1000&q=85"
+                    alt="Churrasco">
+
+                <span class="distinction-badge">
+                    Destaque
+                </span>
+
+            </div>
+
+
+            <div class="restaurant-content">
+
+
+                <div class="restaurant-location">
+
+                    SÃO JOSÉ DOS PINHAIS
+
+                </div>
+
+
+                <h3>
+                    Velha Napolitana
+                </h3>
+
+
+                <p class="cuisine">
+                    Churrascaria
+                </p>
+
+
+                <div class="price">
+                    $$$
+                </div>
+
+
+                <p class="description">
+                    Churrascaria tradicional de São José dos
+                    Pinhais, com foco em carnes e churrasco.
+                </p>
+
+
+                <div class="recommended-dish">
+
+                    <span>
+                        ESPECIALIDADE
+                    </span>
+
+
+                    <strong>
+                        Carnes na brasa
+                    </strong>
+
+                </div>
+
+
+                <p class="restaurant-address">
+
+                    Av. Rui Barbosa, 8371,
+                    São José dos Pinhais - PR
+
+                </p>
+
+
+                <div class="card-footer">
+
+
+                    <a
+                        href="tel:+554132835579">
+
+                        Telefone
+
+                    </a>
+
+
+                    <a
+                        href="https://www.tripadvisor.com.br/Restaurant_Review-g303455-d4759131-Reviews-Churrascaria_Velha_Napolitana-Sao_Jose_Dos_Pinhais_State_of_Parana.html"
+                        target="_blank">
+
+                        Informações
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- =================================
+             LE GADO
+        ================================== -->
+
+        <article
+            class="restaurant-card"
+            data-category="campo-largo"
+            data-search="le gado campo largo carnes parrilla churrasco steakhouse t bone">
+
+
+            <div class="restaurant-image">
+
+                <img
+                    src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=1000&q=85"
+                    alt="Carne preparada na parrilla">
+
+                <span class="distinction-badge">
+                    Selecionado
+                </span>
+
+            </div>
+
+
+            <div class="restaurant-content">
+
+
+                <div class="restaurant-location">
+
+                    CAMPO LARGO
+
+                </div>
+
+
+                <h3>
+                    Le Gado Restaurante
+                </h3>
+
+
+                <p class="cuisine">
+                    Carnes e parrilla
+                </p>
+
+
+                <div class="price">
+                    $$$$
+                </div>
+
+
+                <p class="description">
+                    Casa especializada em carnes nobres
+                    preparadas na parrilla, com acompanhamentos
+                    especiais e proposta contemporânea.
+                </p>
+
+
+                <div class="recommended-dish">
+
+                    <span>
+                        ESPECIALIDADE
+                    </span>
+
+
+                    <strong>
+                        T-Bone na parrilla
+                    </strong>
+
+                </div>
+
+
+                <p class="restaurant-address">
+
+                    Rua Xavier da Silva, 752,
+                    Campo Largo - PR
+
+                </p>
+
+
+                <div class="card-footer">
+
+
+                    <a
+                        href="tel:+5541992355786">
+
+                        Telefone
+
+                    </a>
+
+
+                    <a
+                        href="https://restaurantguru.com.br/Le-Gado-Restaurante-Campo-Largo"
+                        target="_blank">
+
+                        Informações
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- =================================
+             L'ADORE
+        ================================== -->
+
+        <article
+            class="restaurant-card"
+            data-category="campo-largo"
+            data-search="ladore gourmet grill campo largo brasileira arabe gourmet">
+
+
+            <div class="restaurant-image">
+
+                <img
+                    src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1000&q=85"
+                    alt="Restaurante">
+
+                <span class="distinction-badge">
+                    Região Metropolitana
+                </span>
+
+            </div>
+
+
+            <div class="restaurant-content">
+
+
+                <div class="restaurant-location">
+
+                    CAMPO LARGO
+
+                </div>
+
+
+                <h3>
+                    L'Adore Gourmet & Grill
+                </h3>
+
+
+                <p class="cuisine">
+                    Brasileira e opções variadas
+                </p>
+
+
+                <div class="price">
+                    $$$
+                </div>
+
+
+                <p class="description">
+                    Restaurante localizado no centro de Campo
+                    Largo, com opções brasileiras e alternativas
+                    vegetarianas.
+                </p>
+
+
+                <div class="recommended-dish">
+
+                    <span>
+                        PROPOSTA
+                    </span>
+
+
+                    <strong>
+                        Cozinha brasileira e pratos variados
+                    </strong>
+
+                </div>
+
+
+                <p class="restaurant-address">
+
+                    Rua Dom Pedro II, 1030,
+                    Centro, Campo Largo - PR
+
+                </p>
+
+
+                <div class="card-footer">
+
+
+                    <a
+                        href="tel:+554132921956">
+
+                        Telefone
+
+                    </a>
+
+
+                    <a
+                        href="https://restaurantguru.com.br/Ladore-Gourmet-Campo-Largo"
+                        target="_blank">
+
+                        Informações
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- =================================
+             GIANTTURA WINE GARDEN
+        ================================== -->
+
+        <article
+            class="restaurant-card"
+            data-category="campo-largo"
+            data-search="gianttura wine garden campo largo vinicola legado vinho gastronomia autoral">
+
+
+            <div class="restaurant-image">
+
+                <img
+                    src="https://images.unsplash.com/photo-1516594915697-87eb3b1c14ea?auto=format&fit=crop&w=1000&q=85"
+                    alt="Experiência gastronômica e vinho">
+
+                <span class="distinction-badge">
+                    Experiência
+                </span>
+
+            </div>
+
+
+            <div class="restaurant-content">
+
+
+                <div class="restaurant-location">
+
+                    CAMPO LARGO · FAZENDINHA
+
+                </div>
+
+
+                <h3>
+                    Gianttura Wine Garden
+                </h3>
+
+
+                <p class="cuisine">
+                    Gastronomia autoral e vinhos
+                </p>
+
+
+                <div class="price">
+                    $$$$
+                </div>
+
+
+                <p class="description">
+                    Experiência gastronômica em meio aos vinhedos
+                    da Vinícola Legado, combinando gastronomia
+                    autoral e vinhos.
+                </p>
+
+
+                <div class="recommended-dish">
+
+                    <span>
+                        EXPERIÊNCIA
+                    </span>
+
+
+                    <strong>
+                        Gastronomia entre os vinhedos
+                    </strong>
+
+                </div>
+
+
+                <p class="restaurant-address">
+
+                    PR-510, Rod. Eng. Raul Azevedo de Macedo,
+                    5800, Campo Largo - PR
+
+                </p>
+
+
+                <div class="card-footer">
+
+
+                    <a
+                        href="tel:+5541996640053">
+
+                        Telefone
+
+                    </a>
+
+
+                    <a
+                        href="https://giantturawinegarden.com.br/"
+                        target="_blank">
+
+                        Site
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+    </div>
+
+
+
+    <!-- SEM RESULTADOS -->
+
+    <div
+        class="no-results"
+        id="noResults">
+
+        Nenhum restaurante encontrado.
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================
+     PRATOS
+====================================== -->
+
+<section
+    class="dishes-section"
+    id="pratos">
+
+
+    <div class="section-header">
+
+        <span class="eyebrow">
+            EXPERIÊNCIAS GASTRONÔMICAS
+        </span>
+
+
+        <h2>
+            Pratos e experiências
+        </h2>
+
+
+        <p>
+            Algumas das experiências que podem servir
+            de ponto de partida para sua próxima saída.
+        </p>
+
+    </div>
+
+
+
+    <div class="dish-grid">
+
+
+        <!-- PRATO 1 -->
+
+        <article class="dish-card">
+
+            <img
+                src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=900&q=85"
+                alt="Carne grelhada">
+
+
+            <div class="dish-content">
+
+                <span>
+                    CARNES
+                </span>
+
+
+                <h3>
+                    T-Bone na parrilla
+                </h3>
+
+
+                <p>
+                    Le Gado · Campo Largo
+                </p>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- PRATO 2 -->
+
+        <article class="dish-card">
+
+            <img
+                src="https://images.unsplash.com/photo-1473093295043-cdd812d0e601?auto=format&fit=crop&w=900&q=85"
+                alt="Massa italiana">
+
+
+            <div class="dish-content">
+
+                <span>
+                    ITALIANA
+                </span>
+
+
+                <h3>
+                    Massas artesanais
+                </h3>
+
+
+                <p>
+                    Pantucci Trattoria · Curitiba
+                </p>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- PRATO 3 -->
+
+        <article class="dish-card">
+
+            <img
+                src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=900&q=85"
+                alt="Prato gastronômico">
+
+
+            <div class="dish-content">
+
+                <span>
+                    ITALIANA
+                </span>
+
+
+                <h3>
+                    Sequência tradicional
+                </h3>
+
+
+                <p>
+                    Di Paolo · Curitiba
+                </p>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- PRATO 4 -->
+
+        <article class="dish-card">
+
+            <img
+                src="https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?auto=format&fit=crop&w=900&q=85"
+                alt="Gastronomia contemporânea">
+
+
+            <div class="dish-content">
+
+                <span>
+                    AUTORAL
+                </span>
+
+
+                <h3>
+                    Criações do chef
+                </h3>
+
+
+                <p>
+                    Gianttura · Curitiba
+                </p>
+
+            </div>
+
+        </article>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================
+     FOOTER
+====================================== -->
+
+<footer>
+
+
+    <div class="footer-logo">
+
+        GASTRÔ
+
+        <span>
+            SELECTION
+        </span>
+
+    </div>
+
+
+    <p>
+        Guia independente de restaurantes
+        da Região Metropolitana de Curitiba.
+    </p>
+
+
+    <div class="footer-links">
+
+        <a href="#inicio">
+            Início
+        </a>
+
+
+        <a href="#restaurantes">
+            Restaurantes
+        </a>
+
+
+        <a href="#distincoes">
+            Seleção
+        </a>
+
+
+        <a href="#pratos">
+            Pratos
+        </a>
+
+    </div>
+
+
+    <small>
+        © 2026 Gastrô Selection
+    </small>
+
+</footer>
+
+
+
+<!-- =====================================
+     JAVASCRIPT
+====================================== -->
+
+<script src="script.js"></script>
